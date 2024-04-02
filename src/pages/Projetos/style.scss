@@ -43,9 +43,14 @@
     @include flex(column, center, center);
   }
 
+  @include mediaQueryMax(large) {
+    height: 86vh;
+  }
+
   @include mediaQueryMax(medium) {
     @include flex(column, center, flex-start);
     padding-top: 1rem !important;
+    height: 86vh;
   }
 
   // background-color: red;
