@@ -1,0 +1,133 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.welcome-banner {
+  // background-color: lightpink;
+  height: 50vh;
+  padding: 8vh 14vw 0 14vw !important;
+  scroll-snap-align: center;
+
+  @include mediaQueryMax(large) {
+    padding: 8vh 7vw 0 7vw !important;
+    height: 58vh !important;
+    margin-bottom: 42vh !important;
+  }
+
+  @include mediaQueryMax(medium) {
+    height: 92vh;
+    margin-top: 8vh;
+  }
+
+  @include mediaQueryMax(small) {
+    padding: 8vh 5vw 0 5vw !important;
+  }
+}
+
+
+.rowC {
+  height: 100%;
+}
+
+.description-banner {
+  // background-color: red;
+  @include flex(column, flex-start, center);
+
+  @include mediaQueryMax(large) {
+    @include flex(column, center, flex-end);
+    height: 50% !important;
+  }
+}
+
+.image-banner {
+  @include flex-center(row);
+  // background-color: aqua;
+  width: 100%;
+  height: 100%;
+
+  @include mediaQueryMax(large) {
+    @include flex(column, center, flex-end);
+    height: 50% !important;
+  }
+}
+
+.regular-sentence {
+
+  font-size: $font-size-subtitle;
+  text-align-last: left;
+  text-align: left;
+
+  @include mediaQueryMax(xx-large) {
+    font-size: $font-size-subtitle-lg;
+  }
+
+  @include mediaQueryMax(large) {
+    font-size: $font-size-subtitle-md;
+  }
+
+  @include mediaQueryMax(small) {
+    font-size: $font-size-subtitle-sm;
+    margin-top: 5px;
+    text-align-last: center;
+    text-align: center;
+  }
+}
+
+.h1-sentence {
+  font-size: $font-size-title;
+  color: $color-primary;
+  text-align-last: left;
+  text-align: left;
+  // font-weight: 500;
+
+
+  @include mediaQueryMax(xx-large) {
+    font-size: $font-size-title-lg;
+  }
+
+  @include mediaQueryMax(large) {
+    font-size: $font-size-title-md;
+  }
+
+  @include mediaQueryMax(small) {
+    font-size: $font-size-title-sm;
+    font-weight: 500;
+    text-align-last: center;
+    text-align: center;
+  }
+}
+
+.name {
+  color: $color-primary;
+  // font-weight: 500;
+  // margin-bottom: 15px;
+}
+
+.image-box {
+
+  width: 220px;
+  height: 220px;
+
+  @include mediaQueryMax(xx-large) {
+    width: 195px;
+    height: 195px;
+  }
+
+  @include mediaQueryMax(large) {
+    width: 150px;
+    height: 150px;
+  }
+
+  @include mediaQueryMax(small) {
+    width: 140px;
+    height: 140px;
+  }
+
+}
+
+.selfie-img {
+
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 200px;
+}

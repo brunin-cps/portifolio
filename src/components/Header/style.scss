@@ -1,0 +1,53 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.nav {
+  width: 100%;
+  @include flex-center(row);
+}
+
+.navbar {
+  // background-color: red !important;
+  font-size: $font-size-subtitle;
+  // text-decoration: underline;
+  // font-weight: 500;
+  min-height: 8vh;
+
+  @include mediaQueryMax(large) {
+    font-size: $font-size-subtitle-md;
+    position: fixed !important;
+    top: 0 !important;
+    width: 100%;
+  }
+
+}
+
+.nav-link-op:hover {
+  opacity: .7;
+}
+
+.transition-nav {
+  animation: slideMe 0.3s ease-in;
+  margin-right: 1vw;
+
+  @include mediaQueryMax(large) {
+    animation: none;
+  }
+}
+
+@keyframes slideMe {
+  0% {
+    transform: translateY(90px);
+  }
+
+  100% {}
+}
+
+
+.middleNavOption {
+  margin-left: 35px !important;
+
+  @include mediaQueryMax(large) {
+    margin-left: 0 !important;
+  }
+}
