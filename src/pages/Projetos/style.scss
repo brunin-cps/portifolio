@@ -26,7 +26,7 @@
 .project-body {
 
   @include flex(column, flex-start, center);
-  // background-color: lightcoral;
+  background-color: lightcoral;
   height: 100%;
 
   @include mediaQueryMax(large) {
@@ -44,7 +44,7 @@
   }
 
   @include mediaQueryMax(large) {
-    height: 90vh;
+    height: 82vh;
   }
 
   @include mediaQueryMax(medium) {
