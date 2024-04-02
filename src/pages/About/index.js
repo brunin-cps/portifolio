@@ -11,7 +11,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ArrowUpBlack from '../../assets/up-arrow.png'
 import ArrowUpWhite from '../../assets/up-arrow-wt.png'
-import getAllExperiences from "../../utils/experiences";
+// import getAllExperiences from "../../utils/experiences";
 
 
 
