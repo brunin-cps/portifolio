@@ -20,6 +20,10 @@
     width: 100%;
   }
 
+  @include mediaQueryMax(small) {
+    min-height: 8dvh;
+  }
+
 }
 
 .nav-link-op:hover {

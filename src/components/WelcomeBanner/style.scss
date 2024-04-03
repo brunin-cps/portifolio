@@ -2,24 +2,23 @@
 @import "../../styles/_variables.scss";
 
 .welcome-banner {
-  // background-color: lightpink;
+  background-color: lightpink;
   height: 50vh;
   padding: 8vh 14vw 0 14vw !important;
   scroll-snap-align: center;
 
   @include mediaQueryMax(large) {
     padding: 8vh 7vw 0 7vw !important;
-    height: 58vh !important;
-    margin-bottom: 42vh !important;
+    height: 62vh !important;
+    margin-bottom: 38vh !important;
   }
 
-  @include mediaQueryMax(medium) {
-    height: 92vh;
-    margin-top: 8vh;
-  }
+
 
   @include mediaQueryMax(small) {
-    padding: 8vh 5vw 0 5vw !important;
+    height: 62dvh !important;
+    margin-bottom: 38dvh !important;
+    padding: 8dvh 5vw 0 5vw !important;
   }
 }
 
