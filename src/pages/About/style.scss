@@ -2,9 +2,7 @@
 @import "../../styles/_variables.scss";
 
 .about-section {
-  // background-color: aqua !important;
   min-height: 92vh;
-  // padding: 8vh;
   padding: 8vh 14vw 0 14vw !important;
   @include flex(column, center, space-evenly);
 
@@ -12,29 +10,18 @@
     padding: 8vh 7vw 0 7vw !important;
   }
 
-  @include mediaQueryMax(medium) {
-    // height: 92vh;
-    // margin-top: 8vh;
-  }
-
   @include mediaQueryMax(small) {
-    // height: 100vh;
     min-height: 94vh;
-
     padding: 8vh 1vw 0 1vw !important;
   }
 
 }
 
 .linkedin-media {
-  // background-color: red;
-
   @include flex(row, center, flex-start);
-
 }
 
 .links {
-  // background-color: aqua;
   text-decoration: none;
   width: 100% !important;
   @include flex(row, center, flex-start);
@@ -42,10 +29,7 @@
 }
 
 .github-media {
-  // background-color: green;
-
   @include flex(row, center, flex-start);
-
 }
 
 .icon-space {
@@ -58,9 +42,7 @@
 }
 
 .back-box-ab {
-  // background-color: red;
   align-self: flex-end;
-  // scroll-snap-align: center;
   justify-self: flex-end;
   margin: 0 !important;
   height: 8vh;
@@ -69,7 +51,6 @@
   @include mediaQueryMax(small) {
     height: 6vh;
   }
-
 }
 
 .previous-box-ab {
@@ -79,10 +60,7 @@
 
   @include mediaQueryMax(large) {
     @include flex(column, center, center);
-
   }
-
-  // background-color: green;
 }
 
 .title-about {
@@ -100,7 +78,6 @@
   height: 35px;
   display: flex;
   justify-content: center;
-  // background-color: aqua;
 
   @include mediaQueryMax(small) {
     height: 20px;
@@ -117,18 +94,13 @@
 }
 
 .about-body {
-  // height: 100%;
   width: 100%;
   min-height: 30vh;
   margin-bottom: 1.5rem;
-  // background-color: aquamarine;
   @include flex(row, flex-start, center);
-
-
 }
 
 .about-links {
-  // height: 100%;
   padding-top: .5rem;
   padding-bottom: .5rem;
   width: 100%;
@@ -140,13 +112,6 @@
   @include mediaQueryMax(small) {
     font-size: $font-size-content-sm;
   }
-
-
-  // @include mediaQueryMax(x-large) {
-  //   @include flex(column, center, center);
-  // }
-
-  // background-color: red;
 }
 
 .description-about {
@@ -154,7 +119,6 @@
 }
 
 .about-image {
-  // background-color: purple;
   padding: 0 !important;
   min-height: 12vh;
   @include flex(row, center, flex-end);
@@ -163,13 +127,11 @@
 }
 
 .about-description {
-
   overflow-wrap: break-word;
   text-align: start;
-  // background-color: green;
   min-height: 9vh;
   padding-left: 1rem !important;
-  // @include flex(column, flex-start, center);
+
 
   @include mediaQueryMax(large) {
     margin-bottom: 2rem !important;
@@ -187,9 +149,6 @@
   @include flex(row, center, center);
 
   @include mediaQueryMax(medium) {
-    // padding: 0;
     width: 100%;
   }
-
-  // background-color: yellow;
 }

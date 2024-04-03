@@ -27,7 +27,7 @@ const Projetos = React.forwardRef((props, ref) => {
   }, [props.bodyColor])
 
   return (
-    <Container fluid className="project-section" ref={ref} style={{ color: textColor, backgroundColor: project.color }}>
+    <Container fluid className="project-section" ref={ref} style={{ color: textColor, backgroundColor: props.bodyColor }}>
       <Container fluid className="project-body">
 
         <div className="vl" style={project.id > 1 ? { top: "calc((" + project.id + " * 100vh))", height: "41vh", borderColor: textColor } : { display: "none" }} ></div>

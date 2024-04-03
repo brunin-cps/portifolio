@@ -2,9 +2,7 @@
 @import "../../styles/_variables.scss";
 
 .experience-section {
-  // background-color: aqua;
   min-height: 92vh;
-  // padding: 8vh;
   padding: 8vh 14vw 0 14vw !important;
   @include flex(column, center, center);
 
@@ -12,23 +10,15 @@
     padding: 8vh 7vw 0 7vw !important;
   }
 
-  @include mediaQueryMax(medium) {
-    // height: 92vh;
-    // margin-top: 8vh;
-  }
-
   @include mediaQueryMax(small) {
-    // height: 100vh;
-
-    padding: 8vh 6vw 0 6vw !important;
+    min-height: 92dvh;
+    padding: 8dvh 6vw 0 6vw !important;
   }
 
 }
 
 .back-box-xp {
-  // background-color: red;
   align-self: flex-end;
-  // scroll-snap-align: center;
   justify-self: flex-end;
   margin: 0 !important;
   height: 8vh;
@@ -45,8 +35,6 @@
     @include flex(column, center, center);
 
   }
-
-  // background-color: green;
 }
 
 .icon-prev-box-xp {
@@ -54,7 +42,6 @@
   height: 35px;
   display: flex;
   justify-content: center;
-  // background-color: aqua;
 }
 
 .xp-description {
@@ -63,29 +50,27 @@
 
 .experience-date {
   font-size: $font-size-content-sm;
-
 }
 
 .experience-body {
-  // height: 100%;
   min-height: 12vh;
   margin-bottom: 1.5rem;
-  // background-color: aquamarine;
   @include flex(row, flex-start, center);
 
-  // @include mediaQueryMax(x-large) {
-  //   @include flex(column, center, center);
-  // }
+  @include mediaQueryMax(small) {
+    min-height: 12dvh;
+  }
 
-  // background-color: red;
 }
 
 .experience-image {
-  // background-color: purple;
   padding: 0 !important;
   min-height: 12vh;
   @include flex(row, center, flex-end);
 
+  @include mediaQueryMax(small) {
+    min-height: 12dvh;
+  }
 
 }
 
@@ -93,15 +78,13 @@
 
   overflow-wrap: break-word;
   text-align: start;
-  // background-color: green;
   min-height: 12vh;
   padding-left: 1rem !important;
   @include flex(column, flex-start, center);
 
-  // @include mediaQuery(xx-large) {
-  //   // padding-left: 4rem;
-
-  // }
+  @include mediaQueryMax(small) {
+    min-height: 12dvh;
+  }
 }
 
 .experience-imgs-box {
@@ -110,9 +93,6 @@
   @include flex(row, center, center);
 
   @include mediaQueryMax(medium) {
-    // padding: 0;
     width: 100%;
   }
-
-  // background-color: yellow;
 }

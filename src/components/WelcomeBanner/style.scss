@@ -2,7 +2,6 @@
 @import "../../styles/_variables.scss";
 
 .welcome-banner {
-  background-color: lightpink;
   height: 50vh;
   padding: 8vh 14vw 0 14vw !important;
   scroll-snap-align: center;
@@ -28,7 +27,6 @@
 }
 
 .description-banner {
-  // background-color: red;
   @include flex(column, flex-start, center);
 
   @include mediaQueryMax(large) {
@@ -39,7 +37,6 @@
 
 .image-banner {
   @include flex-center(row);
-  // background-color: aqua;
   width: 100%;
   height: 100%;
 
@@ -76,8 +73,6 @@
   color: $color-primary;
   text-align-last: left;
   text-align: left;
-  // font-weight: 500;
-
 
   @include mediaQueryMax(xx-large) {
     font-size: $font-size-title-lg;
@@ -97,8 +92,6 @@
 
 .name {
   color: $color-primary;
-  // font-weight: 500;
-  // margin-bottom: 15px;
 }
 
 .image-box {

@@ -45,9 +45,6 @@
     height: 92dvh;
     padding-top: 10dvh;
   }
-
-
-  // background-color: red;
 }
 
 .control-box {
@@ -58,9 +55,6 @@
   @include mediaQueryMax(small) {
     height: 8dvh;
   }
-
-  // @include flex(column, center, center); // margin-top: 15vh !important;
-  // background-color: greenyellow;
 }
 
 .icon-prev-box {
@@ -74,7 +68,6 @@
   }
 
   cursor: pointer;
-  // background-color: aqua;
 }
 
 .icon-next-box {
@@ -87,9 +80,6 @@
   @include mediaQueryMax(large) {
     justify-content: center;
   }
-
-
-  // background-color: aqua;
 }
 
 .previous-box {
@@ -101,8 +91,6 @@
     @include flex(column, center, flex-start);
 
   }
-
-  // background-color: green;
 }
 
 .next-box {
@@ -113,14 +101,9 @@
   @include mediaQueryMax(large) {
     @include flex(column, center, flex-start);
   }
-
-  // background-color: red;
 }
 
-// .icon-box:hover {
-//   width: 100%;
-//   height: 40px;
-// }
+
 
 
 
@@ -184,15 +167,12 @@
 
 .project-banner {
   @include flex-center(row);
-
-  // background-color: lightgray;
 }
 
 .title-session {
   font-size: $font-size-subtitle;
   width: 100%;
   margin-bottom: 15px;
-  // background-color: gold;
 }
 
 .title-style {
@@ -201,7 +181,6 @@
 }
 
 .content-banner {
-  // background-color: rebeccapurple;
   font-size: $font-size-content;
 
   @include mediaQueryMax(xx-large) {
@@ -213,7 +192,6 @@
   }
 
   text-align: left;
-  // height: 100%;
 }
 
 .carrousel-details {
@@ -223,9 +201,6 @@
 
 .project-imgs-box {
   @include flex(row, flex-start, center);
-  // padding: .5rem;
-
-  // background-color: $color-primary;
   width: 80%;
   height: 100%;
 
@@ -271,6 +246,4 @@
   @include mediaQueryMax(x-small) {
     max-height: 220px;
   }
-
-  // border-radius: 200px;
 }
