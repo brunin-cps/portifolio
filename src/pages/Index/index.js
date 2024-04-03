@@ -30,25 +30,25 @@ const Home = () => {
 
   const goToHome = () => {
     setScrollSize(height / 3)
-    welcomeBannerRef.current.scrollIntoView({ behavior: 'smooth' })
+    welcomeBannerRef.current.scrollIntoView({ behavior: 'auto' })
   }
 
   const goToExperiences = () => {
     if (scrollPos <= height / 2) setScrollSize(height * 3)
-    experienceRef.current.scrollIntoView({ behavior: 'smooth' })
+    experienceRef.current.scrollIntoView({ behavior: 'auto' })
   }
 
   const goToProjects = (projecId) => {
 
     setScrollSize(height / 3)
     if (!itemsRef.current) return;
-    itemsRef.current[projecId - 1]?.scrollIntoView({ behavior: 'smooth' })
+    itemsRef.current[projecId - 1]?.scrollIntoView({ behavior: 'auto' })
   }
 
   const goToAbout = () => {
 
     if (scrollPos <= height / 2) setScrollSize(height * 4)
-    aboutRef.current.scrollIntoView({ behavior: 'smooth' })
+    aboutRef.current.scrollIntoView({ behavior: 'auto' })
   }
 
   const changeColors = () => {
