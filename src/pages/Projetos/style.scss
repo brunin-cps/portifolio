@@ -5,10 +5,10 @@
 
   scroll-snap-align: center;
   height: 100vh;
-  padding: 0vh 14vw 0 14vw !important;
+  padding: 0dvh 14vw 0 14vw !important;
 
   @include mediaQueryMax(large) {
-    padding: 0vh 7vw 0 7vw !important;
+    padding: 0dvh 7vw 0 7vw !important;
   }
 
   @include mediaQueryMax(medium) {

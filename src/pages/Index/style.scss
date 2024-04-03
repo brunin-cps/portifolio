@@ -9,6 +9,10 @@
   scroll-snap-type: y mandatory;
   position: relative;
 
+  @include mediaQueryMax(small) {
+    height: 100dvh;
+  }
+
 }
 
 .lightbub-box {
