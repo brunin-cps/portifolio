@@ -18,6 +18,7 @@
 
   @include mediaQueryMax(small) {
     padding: 0 5vw 0 5vw !important;
+    height: 100dvh;
   }
 }
 
@@ -40,6 +41,12 @@
     padding-top: 10vh;
   }
 
+  @include mediaQueryMax(small) {
+    height: 92dvh;
+    padding-top: 10dvh;
+  }
+
+
   // background-color: red;
 }
 
@@ -48,6 +55,9 @@
   height: 8vh;
   width: 100%;
 
+  @include mediaQueryMax(small) {
+    height: 8dvh;
+  }
 
   // @include flex(column, center, center); // margin-top: 15vh !important;
   // background-color: greenyellow;
