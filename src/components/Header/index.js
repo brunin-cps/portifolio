@@ -12,8 +12,6 @@ const Header = ({ goToProjects, goToExperiences, goToHome, goToAbout, bodyColor,
   const [textColor, setTextColor] = useState("black");
 
   useEffect(() => {
-
-    // console.log(bodyColor)
     if (bodyColor === "white") setTextColor("black")
     else setTextColor("white")
 

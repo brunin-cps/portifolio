@@ -34,7 +34,7 @@ const About = React.forwardRef((props, ref) => {
         <Row className="about-body">
           <Col xs={12} sm={12} md={12} lg={3} xl={3} xxl={3} className="about-description">
             <span className="title-about">Software Development</span ><br />
-            <span className="description-about">Low level development with C/C++ (3 years). High level software development with Python (2 year). I am also capable of working on full stack projects using HTML, CSS, JavaScript, React.js (with or without TypeScript), Vue.js and Node.js.</span>
+            <span className="description-about"> I am capable of working on full stack projects using HTML, CSS, JavaScript, React.js (with or without TypeScript), Vue.js and Node.js (3 years). And as undergraduate I also development with C/C++ (3 years) and with with Python (2 year).</span>
           </Col>
           <Col xs={12} sm={12} md={12} lg={3} xl={3} xxl={3} className="about-description">
             <span className="title-about">Testing</span ><br />

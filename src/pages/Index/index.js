@@ -72,7 +72,6 @@ const Home = () => {
       setPage(3)
       setScrollSize(height / 3)
     }
-    // console.log(position, width, height, page)
     setScrollPos(position);
   };
 
@@ -80,13 +79,10 @@ const Home = () => {
     itemsRef.current = itemsRef.current.slice(0, itens.length);
   }, [itens]);
 
-
-
   useEffect(() => {
     if (width <= 992) setIsItMobile(true)
     else setIsItMobile(false)
-
-  }, []);
+  }, [width]);
 
   return (
     <div id="bodyDiv" className="totalBody" style={{ backgroundColor: bodyColor }} onScroll={() => handleScroll()}>
