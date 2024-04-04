@@ -80,11 +80,10 @@ const Home = () => {
 
   return (
     <div id="bodyDiv" className="totalBody" style={{ backgroundColor: bodyColor }} onScroll={() => handleScroll()}>
-      <div ref={welcomeBannerRef} style={{ display: "hidden" }}></div>
-
-      {scrollPos <= scrollSize ? <WelcomeBanner bodyColor={bodyColor} size={"50vh"} marginBotton={"0vh"}></WelcomeBanner> : <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"fixed"} marginBotton={"0vh"} page={page} ></Header>}
-      {scrollPos > scrollSize ? <WelcomeBanner bodyColor={bodyColor} size={"58vh"} marginBotton={"42vh"}></WelcomeBanner> : <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"relative"} marginBotton={"42vh"} page={page}></Header>}
-
+      <div ref={welcomeBannerRef} >
+        {scrollPos <= scrollSize ? <WelcomeBanner bodyColor={bodyColor} size={"50vh"} marginBotton={"0vh"}></WelcomeBanner> : <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"fixed"} marginBotton={"0vh"} page={page} ></Header>}
+        {scrollPos > scrollSize ? <WelcomeBanner bodyColor={bodyColor} size={"58vh"} marginBotton={"42vh"}></WelcomeBanner> : <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"relative"} marginBotton={"42vh"} page={page}></Header>}
+      </div>
       {itens.map((project, i) =>
         <Projetos ref={el => itemsRef.current[i] = el} goToProjects={goToProjects} goToHome={goToHome} bodyColor={bodyColor} lengthProjects={itens.length} project={project} key={i}></Projetos>
       )}
