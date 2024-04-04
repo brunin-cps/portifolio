@@ -80,7 +80,7 @@ const Home = () => {
 
   return (
     <div id="bodyDiv" className="totalBody" style={{ backgroundColor: bodyColor }} onScroll={() => handleScroll()}>
-      <div ref={welcomeBannerRef} >
+      <div ref={welcomeBannerRef} className="home-page">
         {scrollPos <= scrollSize ? <WelcomeBanner bodyColor={bodyColor} size={"50vh"} marginBotton={"0vh"}></WelcomeBanner> : <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"fixed"} marginBotton={"0vh"} page={page} ></Header>}
         {scrollPos > scrollSize ? <WelcomeBanner bodyColor={bodyColor} size={"58vh"} marginBotton={"42vh"}></WelcomeBanner> : <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"relative"} marginBotton={"42vh"} page={page}></Header>}
       </div>
