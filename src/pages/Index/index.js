@@ -8,6 +8,7 @@ import Projetos from "../Projetos";
 import getAllProjects from "../../utils/projects";
 import Experience from "../Experiencies";
 import About from "../About";
+import HomePage from "../HomePage";
 // import Brasil from "../../assets/brazil.png"
 // import Form from 'react-bootstrap/Form';
 
@@ -16,11 +17,13 @@ const Home = () => {
   const [scrollPos, setScrollPos] = useState(0)
 
   const [page, setPage] = useState(0)
+  const [isItMobile, setIsItMobile] = useState(false)
+
   // const [language, setLanguage] = useState("ingles")
 
 
   const [itens] = useState(getAllProjects());
-  const { innerHeight: height } = window;
+  const { innerWidth: width, innerHeight: height } = window;
   const [scrollSize, setScrollSize] = useState(height / 3)
 
   const itemsRef = useRef([]);
@@ -69,20 +72,50 @@ const Home = () => {
       setPage(3)
       setScrollSize(height / 3)
     }
-    // console.log(position, height, page)
+    // console.log(position, width, height, page)
     setScrollPos(position);
   };
 
   useEffect(() => {
     itemsRef.current = itemsRef.current.slice(0, itens.length);
-
   }, [itens]);
+
+
+
+  useEffect(() => {
+    if (width <= 992) setIsItMobile(true)
+    else setIsItMobile(false)
+
+  }, []);
 
   return (
     <div id="bodyDiv" className="totalBody" style={{ backgroundColor: bodyColor }} onScroll={() => handleScroll()}>
       <div ref={welcomeBannerRef} className="home-page">
-        {scrollPos <= scrollSize ? <WelcomeBanner bodyColor={bodyColor} size={"50vh"} marginBotton={"0vh"}></WelcomeBanner> : <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"fixed"} marginBotton={"0vh"} page={page} ></Header>}
-        {scrollPos > scrollSize ? <WelcomeBanner bodyColor={bodyColor} size={"58vh"} marginBotton={"42vh"}></WelcomeBanner> : <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"relative"} marginBotton={"42vh"} page={page}></Header>}
+        {isItMobile ?
+          <>
+            <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"fixed"} marginBotton={"0vh"} page={page} ></Header>
+            <WelcomeBanner bodyColor={bodyColor} size={"58vh"} marginBotton={"42vh"}></WelcomeBanner>
+          </> :
+          <HomePage
+            bodyColor={bodyColor}
+            scrollSize={scrollSize}
+            scrollPos={scrollPos}
+            goToProjects={goToProjects}
+            goToExperiences={goToExperiences}
+            goToHome={goToHome}
+            goToAbout={goToAbout}
+            page={page}
+          >
+          </HomePage>
+        }
+
+
+
+
+
+
+        {/* {scrollPos <= scrollSize ? <WelcomeBanner bodyColor={bodyColor} size={"50vh"} marginBotton={"0vh"}></WelcomeBanner> : <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"fixed"} marginBotton={"0vh"} page={page} ></Header>}
+        {scrollPos > scrollSize ? <WelcomeBanner bodyColor={bodyColor} size={"58vh"} marginBotton={"42vh"}></WelcomeBanner> : <Header goToProjects={goToProjects} goToExperiences={goToExperiences} goToHome={goToHome} goToAbout={goToAbout} bodyColor={bodyColor} navbarPos={"relative"} marginBotton={"42vh"} page={page}></Header>} */}
       </div>
       {itens.map((project, i) =>
         <Projetos ref={el => itemsRef.current[i] = el} goToProjects={goToProjects} goToHome={goToHome} bodyColor={bodyColor} lengthProjects={itens.length} project={project} key={i}></Projetos>
